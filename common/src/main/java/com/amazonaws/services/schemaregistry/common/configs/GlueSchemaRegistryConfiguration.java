@@ -343,7 +343,7 @@ public class GlueSchemaRegistryConfiguration {
     private void validateAndSetSchemaLookupTagKeyName(Map<String, ?> configs) {
         if (useTagBasedLookup) {
             if (isPresent(configs, "schemaLookUpTagName")) {
-                this.metadataTagKeyName = (String) configs.get("schemaLookUpTagName");
+                this.tagBasedLookupKeyName = (String) configs.get("schemaLookUpTagName");
             } else {
                 throw new AWSSchemaRegistryException("schemaLookUpTagName is required when tag based schemaVersionId lookup is enabled. Set this tag to reduce schema lookups");
             }
@@ -354,7 +354,7 @@ public class GlueSchemaRegistryConfiguration {
     private void validateAndSetSchemaLookupTagKeyValue(Map<String, ?> configs) {
         if (useTagBasedLookup) {
             if (isPresent(configs, "schemaLookUpTagValue")) {
-                this.metadataTagKeyName = (String) configs.get("schemaLookUpTagValue");
+                this.tagBasedLookupKeyValue = (String) configs.get("schemaLookUpTagValue");
             } else {
                 throw new AWSSchemaRegistryException("Metadata tag key name and value are used to reduce schame lookups");
             }

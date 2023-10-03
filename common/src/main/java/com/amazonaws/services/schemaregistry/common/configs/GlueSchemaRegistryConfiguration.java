@@ -108,6 +108,7 @@ public class GlueSchemaRegistryConfiguration {
         validateAndSetSecondaryDeserializer(configs);
         validateAndSetProxyUrl(configs);
         validateAndSetUseTagBasedLookup(configs);
+        validateAndSetSchemaName(configs);
         validateAndSetMetadataTagKeyName(configs);
         validateAndSetSchemaLookupTagKeyName(configs);
         validateAndSetSchemaLookupTagKeyValue(configs);
